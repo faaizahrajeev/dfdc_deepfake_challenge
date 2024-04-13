@@ -9,7 +9,7 @@ ENV CMAKE_PREFIX_PATH="$(dirname $(which conda))/../"
 
 # Setting noninteractive build, setting up tzdata and configuring timezones
 ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=Europe/Berlin
+ENV TZ=Asia/Dubai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update && apt-get install -y libglib2.0-0 libsm6 libxrender-dev libxext6 nano mc glances vim git \
